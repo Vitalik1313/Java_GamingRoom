@@ -1,3 +1,5 @@
+package Inventory;
+
 public class Description {
     private String size;
     private String nameToy;

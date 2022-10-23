@@ -1,4 +1,8 @@
-public class Toy extends Inventory{
+package Inventory;
+
+import Inventory.Inventory;
+
+public class Toy extends Inventory {
     private String brand;
 
     Toy(String size,String name,int price,String brand){

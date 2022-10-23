@@ -1,4 +1,8 @@
-public class Device extends Inventory{
+package Inventory;
+
+import Inventory.Inventory;
+
+public class Device extends Inventory {
     private int rentCost;
     private int termMonth;
 

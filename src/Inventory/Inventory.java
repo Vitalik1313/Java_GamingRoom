@@ -1,4 +1,4 @@
-import java.nio.file.Path;
+package Inventory;
 
 public abstract class Inventory {
     Description desc;

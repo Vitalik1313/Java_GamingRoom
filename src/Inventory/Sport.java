@@ -1,4 +1,8 @@
-public class Sport extends Inventory{
+package Inventory;
+
+import Inventory.Inventory;
+
+public class Sport extends Inventory {
     private String sportName;
     private String quality;
 
