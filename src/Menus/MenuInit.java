@@ -33,5 +33,4 @@ public class MenuInit {
             invoker.callExit();
         }
     }
-
 }

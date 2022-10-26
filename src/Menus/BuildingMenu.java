@@ -17,6 +17,7 @@ public class BuildingMenu {
         System.out.println("2) Search - 2");
         System.out.println("3) Sort - 3");
 
+        System.out.print("Enter choice:");
         Scanner scan = new Scanner(System.in);
         int choice = scan.nextInt();
 

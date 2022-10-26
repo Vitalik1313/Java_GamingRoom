@@ -6,9 +6,7 @@ public class Toy extends Inventory {
     private String brand;
 
     Toy(String size,String name,int price,String brand){
-        desc.setNameToy(name);
-        desc.setPrice(price);
-        desc.setSize(size);
+        setDesc(size,name,price);
         this.brand = brand;
     }
 
