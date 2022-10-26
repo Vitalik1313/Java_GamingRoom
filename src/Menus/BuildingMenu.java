@@ -11,22 +11,28 @@ public class BuildingMenu {
         CallerSearch search = new CallerSearch();
         CallerSort sort = new CallerSort();
         Srt_SrchInv inv = new Srt_SrchInv(sort,search);
+        boolean loop = true;
 
-        System.out.println("\n\tBuilding MENU");
-        System.out.println("1) List all inventory - 1");
-        System.out.println("2) Search - 2");
-        System.out.println("3) Sort - 3");
+        while(loop){
+            System.out.println("\n\tBuilding MENU");
+            System.out.println("1) List all inventory - 1");
+            System.out.println("2) Search - 2");
+            System.out.println("3) Sort - 3");
+            System.out.println("4) Back - 4");
 
-        System.out.print("Enter choice:");
-        Scanner scan = new Scanner(System.in);
-        int choice = scan.nextInt();
+            System.out.print("Enter choice:");
+            Scanner scan = new Scanner(System.in);
+            int choice = scan.nextInt();
 
-        if(choice == 1){
+             if(choice == 1){
             ;
-        } else if (choice == 2) {
-            inv.callSearchMenu();
-        } else if (choice == 3) {
-            inv.callSortMenu();
+             } else if (choice == 2) {
+                    inv.callSearchMenu();
+             } else if (choice == 3) {
+                    inv.callSortMenu();
+             } else if(choice == 4)  {
+                 loop = false;
+             }
         }
     }
 }
