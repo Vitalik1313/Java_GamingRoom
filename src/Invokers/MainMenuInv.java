@@ -1,27 +1,23 @@
 package Invokers;
 
+import Building.Building;
 import Interfaces.Command;
 
 public class MainMenuInv {
     Command roomsMenu;
     Command buildingMenu;
-    Command exit;
 
-    public MainMenuInv(Command roomsMenu, Command buildingMenu, Command exit) {
+    public MainMenuInv(Command roomsMenu, Command buildingMenu) {
         this.roomsMenu = roomsMenu;
         this.buildingMenu = buildingMenu;
-        this.exit = exit;
     }
 
-    public void callRoomMenu(){
-        roomsMenu.execute();
+    public void callRoomMenu(Building building){
+        roomsMenu.execute(building);
     }
 
-    public void callBuildingMenu(){
-        buildingMenu.execute();
+    public void callBuildingMenu(Building building){
+        buildingMenu.execute(building);
     }
 
-    public void callExit(){
-        exit.execute();
-    }
 }

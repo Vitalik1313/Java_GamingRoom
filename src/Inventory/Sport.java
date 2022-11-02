@@ -10,6 +10,7 @@ public class Sport extends Inventory {
         desc = new Description(size,name,price,id,number);
         this.sportName = sportName;
         this.quality = quality;
+        setGroup("Sport");
     }
 
     @Override
@@ -20,4 +21,5 @@ public class Sport extends Inventory {
                 ", desc=" + desc +
                 '}';
     }
+
 }

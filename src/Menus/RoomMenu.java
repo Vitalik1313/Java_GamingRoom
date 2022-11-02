@@ -1,9 +1,11 @@
 package Menus;
 
+import Building.Building;
+
 import java.util.Scanner;
 
 public class RoomMenu {
-    public RoomMenu(){
+    public RoomMenu(Building building){
         boolean loop = true;
 
         while(loop){
@@ -17,11 +19,11 @@ public class RoomMenu {
             int choice = scan.nextInt();
 
             if(choice == 1){
-                System.out.println("Room 1 menu is under maintenance");
+                new CertainMenu(0,building);
             } else if (choice == 2) {
-                System.out.println("Room 2 menu is under maintenance");
+                new CertainMenu(1,building);
             } else if (choice == 3) {
-                System.out.println("Room 3 menu is under maintenance");
+                new CertainMenu(2,building);
             } else if(choice == 4)  {
                 loop = false;
             }

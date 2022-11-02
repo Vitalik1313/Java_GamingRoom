@@ -1,18 +1,17 @@
 package Menus;
 
+import Building.Building;
 import Invokers.MainMenuInv;
 import Reciever.CallerBuildMenu;
 import Reciever.CallerRoomMenu;
-import Reciever.ExitCaller;
 
 import java.util.Scanner;
 
 public class MenuInit {
-    public MenuInit(){
+    public MenuInit(Building building) {
         CallerBuildMenu buildMenu = new CallerBuildMenu();
         CallerRoomMenu roomMenu = new CallerRoomMenu();
-        ExitCaller exit = new ExitCaller();
-        MainMenuInv invoker = new MainMenuInv(roomMenu,buildMenu,exit);
+        MainMenuInv invoker = new MainMenuInv(roomMenu,buildMenu);
 
         while(true) {
             System.out.println("\t\t\t\tMENU");
@@ -25,11 +24,11 @@ public class MenuInit {
             int choice = scan.nextInt();
 
             if (choice == 1) {
-                invoker.callBuildingMenu();
+                invoker.callBuildingMenu(building);
             } else if (choice == 2) {
-                invoker.callRoomMenu();
+                invoker.callRoomMenu(building);
             } else {
-                invoker.callExit();
+                System.exit(0);
             }
         }
     }

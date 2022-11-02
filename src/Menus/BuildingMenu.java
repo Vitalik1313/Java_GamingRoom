@@ -1,5 +1,7 @@
 package Menus;
 
+import Building.Building;
+import Interfaces.Command2;
 import Invokers.Srt_SrchInv;
 import Reciever.CallerSearch;
 import Reciever.CallerSort;
@@ -7,9 +9,9 @@ import Reciever.CallerSort;
 import java.util.Scanner;
 
 public class BuildingMenu {
-    public BuildingMenu(){
-        CallerSearch search = new CallerSearch();
-        CallerSort sort = new CallerSort();
+    public BuildingMenu(Building building){
+        Command2 search = new CallerSearch();
+        Command2 sort = new CallerSort();
         Srt_SrchInv inv = new Srt_SrchInv(sort,search);
         boolean loop = true;
 
@@ -25,11 +27,11 @@ public class BuildingMenu {
             int choice = scan.nextInt();
 
              if(choice == 1){
-            ;
+                 building.showAllInventory();
              } else if (choice == 2) {
-                    inv.callSearchMenu();
+                 inv.callSearchMenu(building,-1);
              } else if (choice == 3) {
-                    inv.callSortMenu();
+                 inv.callSortMenu(building,-1);
              } else if(choice == 4)  {
                  loop = false;
              }

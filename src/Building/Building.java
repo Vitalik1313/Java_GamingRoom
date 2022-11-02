@@ -1,6 +1,7 @@
 package Building;
 
 import Inventory.Device;
+import Inventory.Inventory;
 import Inventory.Sport;
 import Inventory.Toy;
 
@@ -10,6 +11,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class Building {
@@ -17,8 +19,10 @@ public class Building {
     private final int maxBudget;
     private final int maxNumberToys;
     private int curBudget;
+    private ArrayList<Inventory> fullInvent;
 
     public Building(){
+        fullInvent = new ArrayList<Inventory>();
         rooms = new ArrayList <>(3);
         maxBudget = 6000;
         maxNumberToys = 60;
@@ -54,13 +58,56 @@ public class Building {
                 rooms.get(i).buyInventory(new Toy(rs.getString(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getString(5), rs.getInt(6)));
             }
         }
-       rooms.get(2).showInventory();
+        for (Gaming_Room room : rooms) {
+            fullInvent.addAll(room.invent);
+        }
     }
 
     public void showAllInventory(){
-        for (Gaming_Room room : rooms) {
-            room.showInventory();
+        for(Inventory invent : fullInvent){
+            System.out.println(invent);
         }
+    }
+
+    public void showInventoryInRoom(int numberRoom){
+        rooms.get(numberRoom).showInventory();
+    }
+
+    public void searchByGroup(String group){
+        for (Gaming_Room room : rooms) {
+            room.searchByGroup(group);
+        }
+    }
+
+    public void searchBySize(String size){
+        for (Gaming_Room room : rooms) {
+            room.searchBySize(size);
+        }
+    }
+
+    public void searchByName(String name){
+        for (Gaming_Room room : rooms) {
+            room.searchByName(name);
+        }
+    }
+
+    public void sortBySize(){
+        fullInvent.sort(Comparator.comparing(Inventory::getSize));
+        showAllInventory();
+    }
+
+    public void sortByPrice(){
+        fullInvent.sort(Comparator.comparing(Inventory::getPrice));
+        showAllInventory();
+    }
+
+    public void sortByGroup(){
+        fullInvent.sort(Comparator.comparing(Inventory::getGroup));
+        showAllInventory();
+    }
+
+    public ArrayList<Gaming_Room> getRooms() {
+        return rooms;
     }
 }
 

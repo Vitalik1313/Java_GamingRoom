@@ -10,6 +10,7 @@ public class Device extends Inventory {
         desc = new Description(size,name,price,id,number);
         this.rentCost = rentCost;
         this.termMonth = termMonth;
+        setGroup("Device");
     }
 
     public int getRentCost() {
