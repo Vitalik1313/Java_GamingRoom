@@ -5,12 +5,20 @@ import Inventory.Inventory;
 public class Toy extends Inventory {
     private String brand;
 
-    Toy(String size,String name,int price,String brand){
-        setDesc(size,name,price);
+    public Toy(String size,String name,int price,int id,String brand,int number){
+        desc = new Description(size,name,price,id,number);
         this.brand = brand;
     }
 
     public String getBrand() {
         return brand;
+    }
+
+    @Override
+    public String toString() {
+        return "Toy{" +
+                "brand='" + brand + '\'' +
+                ", desc=" + desc +
+                '}';
     }
 }

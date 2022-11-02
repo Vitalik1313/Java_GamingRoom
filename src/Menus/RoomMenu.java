@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class RoomMenu {
     public RoomMenu(){
-
         boolean loop = true;
 
         while(loop){
@@ -26,11 +25,6 @@ public class RoomMenu {
             } else if(choice == 4)  {
                 loop = false;
             }
-
-
         }
-
-
-
     }
 }

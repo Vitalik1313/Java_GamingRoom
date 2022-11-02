@@ -14,9 +14,8 @@ public class MenuInit {
         ExitCaller exit = new ExitCaller();
         MainMenuInv invoker = new MainMenuInv(roomMenu,buildMenu,exit);
 
-
         while(true) {
-            System.out.println("\t\tMENU");
+            System.out.println("\t\t\t\tMENU");
             System.out.println("1)To interact with whole building - 1");
             System.out.println("2)To interact with certain building - 2");
             System.out.println("3)Exit - 3");

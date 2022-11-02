@@ -6,11 +6,18 @@ public class Sport extends Inventory {
     private String sportName;
     private String quality;
 
-    Sport(String size,String name,int price,String sportName,String quality){
-        desc.setNameToy(name);
-        desc.setPrice(price);
-        desc.setSize(size);
+    public Sport(String size,String name,int price,String sportName,String quality,int id,int number){
+        desc = new Description(size,name,price,id,number);
         this.sportName = sportName;
         this.quality = quality;
+    }
+
+    @Override
+    public String toString() {
+        return "Sport{" +
+                "sportName='" + sportName + '\'' +
+                ", quality='" + quality + '\'' +
+                ", desc=" + desc +
+                '}';
     }
 }
