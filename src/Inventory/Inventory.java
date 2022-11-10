@@ -13,7 +13,7 @@ public abstract class Inventory {
         return group;
     }
     public int getPrice(){return desc.getPrice();}
-
+    public int getNumber(){return desc.getNumber();}
     public void setGroup(String group) {
         this.group = group;
     }

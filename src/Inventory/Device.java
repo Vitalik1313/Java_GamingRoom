@@ -19,10 +19,8 @@ public class Device extends Inventory {
 
     @Override
     public String toString() {
-        return "Device{" +
-                "rentCost=" + rentCost +
-                ", termMonth=" + termMonth +
-                ", desc=" + desc +
-                '}';
+        return "Device - " + desc +
+                " rentCost = " + rentCost +
+                ", termMonth = " + termMonth;
     }
 }

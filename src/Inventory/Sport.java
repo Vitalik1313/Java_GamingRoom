@@ -15,11 +15,9 @@ public class Sport extends Inventory {
 
     @Override
     public String toString() {
-        return "Sport{" +
-                "sportName='" + sportName + '\'' +
-                ", quality='" + quality + '\'' +
-                ", desc=" + desc +
-                '}';
+        return "Sport - " + desc +
+                " sportName = '" + sportName  + '\'' +
+                ", quality = '" + quality + '\'';
     }
 
 }

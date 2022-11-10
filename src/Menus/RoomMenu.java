@@ -10,9 +10,9 @@ public class RoomMenu {
 
         while(loop){
             System.out.println("\n\tRoom Menu");
-            System.out.println("1) Get in first room - 1");
-            System.out.println("2) Get in second room - 2");
-            System.out.println("3) Get in third room - 3");
+            System.out.println("1) Get in first room - 1 (6-8 y.o.)");
+            System.out.println("2) Get in second room - 2 (9-12 y.o.)");
+            System.out.println("3) Get in third room - 3 (13 - 16 y.o.)");
             System.out.println("4) Back - 4");
             System.out.print("Enter choice:");
             Scanner scan = new Scanner(System.in);

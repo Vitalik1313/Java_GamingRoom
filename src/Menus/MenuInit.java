@@ -17,6 +17,7 @@ public class MenuInit {
             System.out.println("\t\t\t\tMENU");
             System.out.println("1)To interact with whole building - 1");
             System.out.println("2)To interact with certain building - 2");
+            System.out.println("3)To get information about budget - 3");
             System.out.println("3)Exit - 3");
             System.out.print("Enter choice:");
 
@@ -27,7 +28,10 @@ public class MenuInit {
                 invoker.callBuildingMenu(building);
             } else if (choice == 2) {
                 invoker.callRoomMenu(building);
+            }else if(choice == 3){
+                building.budgetInfo();
             } else {
+                System.out.println("\n\tSee you soon!");
                 System.exit(0);
             }
         }

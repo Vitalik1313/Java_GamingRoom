@@ -10,7 +10,7 @@ public class SSMS {
             String user = "DESKTOP-1F90U0Q\\admin";
             String dbURL = "jdbc:sqlserver://DESKTOP-1F90U0Q\\SQLEXPRESS;dataBase=Inventory;integratedSecurity=true";
             conn = DriverManager.getConnection(dbURL);
-            System.out.println("all ok");
+            System.out.println("Connected to SSMS");
         } catch (SQLException ex) {
             ex.printStackTrace();
         }

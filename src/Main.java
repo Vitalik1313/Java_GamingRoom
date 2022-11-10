@@ -9,7 +9,6 @@ public class Main {
         Building building = new Building();
         SSMS connection = new SSMS();
         building.fillRooms(connection.getConn());
-        building.showAllInventory();
         new MenuInit(building);
     }
 }

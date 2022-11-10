@@ -26,41 +26,49 @@ public class SearchMenu {
                 if (choice == 1) {
                     System.out.println("Enter a group:");
                     searching = scan.nextLine();
-                    if (Objects.equals(searching, "Device") || Objects.equals(searching, "Sport") || Objects.equals(searching, "Toy")) {
+                    System.out.println("\nResult:");
+                    if (searching.equalsIgnoreCase("Device") || searching.equalsIgnoreCase("Sport") || searching.equalsIgnoreCase("Toy")) {
                         building.searchByGroup(searching);
                     }
                 } else if (choice == 2) {
                     System.out.println("Enter a size:");
                     searching = scan.nextLine();
-                    if (Objects.equals(searching, "small") || Objects.equals(searching, "medium") || Objects.equals(searching, "large")) {
+                    System.out.println("\nResult:");
+                    if (searching.equalsIgnoreCase("small") || searching.equalsIgnoreCase("medium") || searching.equalsIgnoreCase("large")) {
                         building.searchBySize(searching);
                     }
                 } else if (choice == 3) {
                     System.out.println("Enter a name:");
                     searching = scan.nextLine();
+                    System.out.println("\nResult:");
                     building.searchByName(searching);
                 }
             } else {
                 if (choice == 1) {
                     System.out.println("Enter a group:");
                     searching = scan.nextLine();
+                    System.out.println("\nResult:");
                     if (Objects.equals(searching, "Device") || Objects.equals(searching, "Sport") || Objects.equals(searching, "Toy")) {
                         building.getRooms().get(numberRoom).searchByGroup(searching);
                     }
                 } else if (choice == 2) {
                     System.out.println("Enter a size:");
                     searching = scan.nextLine();
+                    System.out.println("\nResult:");
                     if (Objects.equals(searching, "small") || Objects.equals(searching, "medium") || Objects.equals(searching, "large")) {
                         building.getRooms().get(numberRoom).searchBySize(searching);
                     }
                 } else if (choice == 3) {
                     System.out.println("Enter a name:");
                     searching = scan.nextLine();
+                    System.out.println("\nResult:");
                     building.getRooms().get(numberRoom).searchByName(searching);
                 }
             }
-            if(choice == 5)
+            if(choice == 5) {
+                System.out.println("\n\tSee you soon!");
                 System.exit(0);
+            }
             if(choice == 4)
                 loop = false;
         }

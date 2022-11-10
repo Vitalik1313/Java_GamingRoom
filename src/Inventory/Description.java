@@ -51,14 +51,17 @@ public class Description {
         return this;
     }
 
+    public int getNumber() {
+        return number;
+    }
+
     @Override
     public String toString() {
-        return "Description{" +
+        return "|||Description: " +
                 "size='" + size + '\'' +
                 ", nameToy='" + nameToy + '\'' +
                 ", price=" + price +
                 ", id=" + id +
-                ", number=" + number +
-                '}';
+                ", number=" + number + "|||";
     }
 }

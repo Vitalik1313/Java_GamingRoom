@@ -23,6 +23,7 @@ public class Gaming_Room {
     }
 
     public void showInventory(){
+        System.out.println(nameOfRoom + ":");
         for(int i = 0;i < invent.size();i++) {
             System.out.println(invent.get(i));
         }
@@ -30,7 +31,7 @@ public class Gaming_Room {
 
     public void searchByGroup(String group){
         for(int i = 0;i < invent.size();i++){
-            if(Objects.equals(invent.get(i).getGroup(), group)){
+            if(invent.get(i).getGroup().equalsIgnoreCase(group)){
                 System.out.println(invent.get(i));
             }
         }
@@ -38,7 +39,7 @@ public class Gaming_Room {
 
     public void searchBySize(String size){
         for(int i = 0;i < invent.size();i++){
-            if(Objects.equals(invent.get(i).getDesc().getSize(), size)){
+            if(invent.get(i).getDesc().getSize().equalsIgnoreCase(size)){
                 System.out.println(invent.get(i));
             }
         }
@@ -46,7 +47,7 @@ public class Gaming_Room {
 
     public void searchByName(String name){
         for(int i = 0;i < invent.size();i++){
-            if(Objects.equals(invent.get(i).getDesc().getNameToy(), name)){
+            if(invent.get(i).getDesc().getNameToy().equalsIgnoreCase(name)){
                 System.out.println(invent.get(i));
             }
         }
@@ -64,4 +65,10 @@ public class Gaming_Room {
         invent.sort(Comparator.comparing(Inventory::getGroup));
     }
 
+    public void sortByNumber(){invent.sort(Comparator.comparing(Inventory::getNumber));}
+
+
+    public ArrayList<Inventory> getInvent() {
+        return invent;
+    }
 }

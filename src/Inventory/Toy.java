@@ -17,10 +17,9 @@ public class Toy extends Inventory {
 
     @Override
     public String toString() {
-        return "Toy{" +
-                "brand='" + brand + '\'' +
-                ", desc=" + desc +
-                '}';
+        return "Toy - " + desc +
+                " brand = '" + brand + '\'' +
+                "  ";
     }
 
 
