@@ -34,7 +34,7 @@ public class SortTest {
         Gaming_Room room = new Gaming_Room("test",0,3);
         room.buyInventory(new Sport("small","test1",0," "," ",0,1));
         room.buyInventory(new Toy("small","doll",15,43632,"kite",2));
-        room.buyInventory(new Sport("medium","test3",0," "," ",0,1));
+        room.buyInventory(new Device("medium","phone",16,6,8,9,1));
         room.sortByGroup();
         for (int i = 0;i < room.getInvent().size() - 1;++i) {
             int temp = room.getInvent().get(i).getGroup().compareTo(room.getInvent().get(i+1).getGroup());
@@ -53,6 +53,4 @@ public class SortTest {
             Assert.assertFalse(room.getInvent().get(i).getNumber() > room.getInvent().get(i+1).getNumber());
         }
     }
-
-
 }

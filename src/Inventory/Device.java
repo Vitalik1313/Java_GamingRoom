@@ -13,10 +13,6 @@ public class Device extends Inventory {
         setGroup("Device");
     }
 
-    public int getRentCost() {
-        return rentCost;
-    }
-
     @Override
     public String toString() {
         return "Device - " + desc +

@@ -15,13 +15,6 @@ public class Description {
         this.number = number;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getSize() {
         return size;
@@ -35,21 +28,11 @@ public class Description {
         return nameToy;
     }
 
-    public void setNameToy(String nameToy) {
-        this.nameToy = nameToy;
-    }
 
     public int getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public Description getDesc(){
-        return this;
-    }
 
     public int getNumber() {
         return number;

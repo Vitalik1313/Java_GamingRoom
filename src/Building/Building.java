@@ -37,7 +37,7 @@ public class Building {
         }
     }
 
-    public void fillRooms(Connection conn) throws SQLException {
+    public boolean fillRooms(Connection conn) throws SQLException {
         Statement stat = conn.createStatement();
 
         for(int i = 0; i < rooms.size();i++) {
@@ -81,6 +81,7 @@ public class Building {
             }
         }
         fillFullInvent();
+        return true;
     }
 
     public void showAllInventory(){
@@ -93,22 +94,31 @@ public class Building {
         rooms.get(numberRoom).showInventory();
     }
 
-    public void searchByGroup(String group){
+    public boolean searchByGroup(String group){
+        boolean founded = false;
         for (Gaming_Room room : rooms) {
-            room.searchByGroup(group);
+            if(room.searchByGroup(group))
+                founded = true;
         }
+        return true;
     }
 
-    public void searchBySize(String size){
+    public boolean searchBySize(String size){
+        boolean founded = false;
         for (Gaming_Room room : rooms) {
-            room.searchBySize(size);
+            if(room.searchBySize(size))
+                founded = true;
         }
+        return founded;
     }
 
-    public void searchByName(String name){
+    public boolean searchByName(String name){
+        boolean founded = false;
         for (Gaming_Room room : rooms) {
-            room.searchByName(name);
+            if(room.searchByName(name))
+                founded = true;
         }
+        return founded;
     }
 
     public void sortBySize(){
@@ -144,6 +154,22 @@ public class Building {
         for (Gaming_Room room : rooms) {
             fullInvent.addAll(room.invent);
         }
+    }
+
+    public void fillRoomsTest(){
+        rooms.get(1).buyInventory(new Device("large","laptop",777,100,2,25616,3));
+        rooms.get(0).buyInventory(new Sport("medium","ball machine",500,"football","new",15124,1));
+        rooms.get(1).buyInventory(new Device("small","tablet",100,50,2,25612,1));
+    }
+
+    public void fillInventTest(){
+        fullInvent.add(new Device("large","laptop",777,100,2,25616,3));
+        fullInvent.add(new Sport("medium","ball machine",500,"football","new",15124,1));
+        fullInvent.add(new Device("small","tablet",100,50,2,25612,1));
+    }
+
+    public ArrayList<Inventory> getFullInvent() {
+        return fullInvent;
     }
 }
 

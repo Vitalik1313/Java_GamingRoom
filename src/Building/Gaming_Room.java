@@ -29,28 +29,37 @@ public class Gaming_Room {
         }
     }
 
-    public void searchByGroup(String group){
+    public boolean searchByGroup(String group){
+        boolean founded = false;
         for(int i = 0;i < invent.size();i++){
             if(invent.get(i).getGroup().equalsIgnoreCase(group)){
                 System.out.println(invent.get(i));
+                founded = true;
             }
         }
+        return founded;
     }
 
-    public void searchBySize(String size){
+    public boolean searchBySize(String size){
+        boolean founded = false;
         for(int i = 0;i < invent.size();i++){
             if(invent.get(i).getDesc().getSize().equalsIgnoreCase(size)){
                 System.out.println(invent.get(i));
+                founded = true;
             }
         }
+        return founded;
     }
 
-    public void searchByName(String name){
+    public boolean searchByName(String name){
+        boolean founded = false;
         for(int i = 0;i < invent.size();i++){
             if(invent.get(i).getDesc().getNameToy().equalsIgnoreCase(name)){
                 System.out.println(invent.get(i));
+                founded = true;
             }
         }
+        return founded;
     }
 
     public void sortBySize(){
