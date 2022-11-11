@@ -18,7 +18,7 @@ public class MenuInit {
             System.out.println("1)To interact with whole building - 1");
             System.out.println("2)To interact with certain building - 2");
             System.out.println("3)To get information about budget - 3");
-            System.out.println("3)Exit - 3");
+            System.out.println("4)Exit - 4");
             System.out.print("Enter choice:");
 
             Scanner scan = new Scanner(System.in);

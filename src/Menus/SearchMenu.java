@@ -48,14 +48,14 @@ public class SearchMenu {
                     System.out.println("Enter a group:");
                     searching = scan.nextLine();
                     System.out.println("\nResult:");
-                    if (Objects.equals(searching, "Device") || Objects.equals(searching, "Sport") || Objects.equals(searching, "Toy")) {
+                    if (searching.equalsIgnoreCase("Device") || searching.equalsIgnoreCase("Sport") || searching.equalsIgnoreCase("Toy")) {
                         building.getRooms().get(numberRoom).searchByGroup(searching);
                     }
                 } else if (choice == 2) {
                     System.out.println("Enter a size:");
                     searching = scan.nextLine();
                     System.out.println("\nResult:");
-                    if (Objects.equals(searching, "small") || Objects.equals(searching, "medium") || Objects.equals(searching, "large")) {
+                    if (searching.equalsIgnoreCase("small") || searching.equalsIgnoreCase("medium") || searching.equalsIgnoreCase("large")) {
                         building.getRooms().get(numberRoom).searchBySize(searching);
                     }
                 } else if (choice == 3) {
