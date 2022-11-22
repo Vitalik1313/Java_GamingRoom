@@ -1,12 +1,29 @@
+package Search_Sort;
+
+import Building.Building;
 import Building.Gaming_Room;
 import Inventory.*;
+import SSMS_Con.SSMS;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.sql.SQLException;
+
 public class SortTest {
+
+    SSMS connection;
+    Building building;
+
     @Test
     public void TestSortBySize(){
-        Gaming_Room room = new Gaming_Room("test",0,3);
+        try {
+            connection = new SSMS();
+        } catch (
+                SQLException e) {
+            throw new RuntimeException(e);
+        }
+        building = new Building(connection.getConn());
+        Gaming_Room room = new Gaming_Room("test",0,3,connection.getConn(), building);
         room.buyInventory(new Sport("small","test1",0," "," ",0,1));
         room.buyInventory(new Sport("big","test2",0," "," ",0,1));
         room.buyInventory(new Sport("medium","test3",0," "," ",0,1));
@@ -19,7 +36,14 @@ public class SortTest {
 
     @Test
     public void TestSortByPrice(){
-        Gaming_Room room = new Gaming_Room("test",0,3);
+        try {
+            connection = new SSMS();
+        } catch (
+                SQLException e) {
+            throw new RuntimeException(e);
+        }
+        building = new Building(connection.getConn());
+        Gaming_Room room = new Gaming_Room("test",0,3,connection.getConn(), building);
         room.buyInventory(new Sport("small","test1",100," "," ",0,1));
         room.buyInventory(new Sport("big","test2",25," "," ",0,1));
         room.buyInventory(new Sport("medium","test3",433," "," ",0,1));
@@ -31,7 +55,14 @@ public class SortTest {
 
     @Test
     public void TestSortByGroup(){
-        Gaming_Room room = new Gaming_Room("test",0,3);
+        try {
+            connection = new SSMS();
+        } catch (
+                SQLException e) {
+            throw new RuntimeException(e);
+        }
+        building = new Building(connection.getConn());
+        Gaming_Room room = new Gaming_Room("test",0,3,connection.getConn(), building);
         room.buyInventory(new Sport("small","test1",0," "," ",0,1));
         room.buyInventory(new Toy("small","doll",15,43632,"kite",2));
         room.buyInventory(new Device("medium","phone",16,6,8,9,1));
@@ -44,7 +75,14 @@ public class SortTest {
 
     @Test
     public void TestSortByNumber(){
-        Gaming_Room room = new Gaming_Room("test",0,3);
+        try {
+            connection = new SSMS();
+        } catch (
+                SQLException e) {
+            throw new RuntimeException(e);
+        }
+        building = new Building(connection.getConn());
+        Gaming_Room room = new Gaming_Room("test",0,3,connection.getConn(), building);
         room.buyInventory(new Sport("small","test1",0," "," ",0,7));
         room.buyInventory(new Toy("small","doll",15,43632,"kite",3));
         room.buyInventory(new Sport("medium","test3",0," "," ",0,25));

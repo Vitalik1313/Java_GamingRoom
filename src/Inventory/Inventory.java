@@ -17,4 +17,6 @@ public abstract class Inventory {
     public void setGroup(String group) {
         this.group = group;
     }
+    public void incNumber(){desc.incNumber();}
+
 }

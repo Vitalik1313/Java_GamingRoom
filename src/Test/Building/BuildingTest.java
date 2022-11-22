@@ -1,11 +1,20 @@
+package Building;
+
 import Building.Building;
+import Logger.MyLogger;
 import SSMS_Con.SSMS;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 public class BuildingTest {
+    MyLogger log = new MyLogger();
+
+    public BuildingTest() throws IOException {
+    }
+
     @Test
     public void TestFillingRooms() throws SQLException {
         SSMS connection;
@@ -14,8 +23,8 @@ public class BuildingTest {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        Building building = new Building();
-        Assert.assertTrue(building.fillRooms(connection.getConn()));
+        Building building = new Building(connection.getConn());
+        Assert.assertTrue(building.fillRooms());
     }
 
     @Test
@@ -26,7 +35,7 @@ public class BuildingTest {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        Building building = new Building();
+        Building building = new Building(connection.getConn());
         building.fillRoomsTest();
 
         Assert.assertTrue(building.searchByName("ball machine"));
@@ -42,7 +51,7 @@ public class BuildingTest {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        Building building = new Building();
+        Building building = new Building(connection.getConn());
         building.fillInventTest();
         building.sortByGroup();
 
@@ -60,7 +69,7 @@ public class BuildingTest {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        Building building = new Building();
+        Building building = new Building(connection.getConn());
         building.fillInventTest();
         building.sortByPrice();
 
@@ -78,7 +87,7 @@ public class BuildingTest {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        Building building = new Building();
+        Building building = new Building(connection.getConn());
         building.fillInventTest();
         building.sortBySize();
 
@@ -96,12 +105,24 @@ public class BuildingTest {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        Building building = new Building();
+        Building building = new Building(connection.getConn());
         building.fillInventTest();
         building.sortByNumber();
 
         for(int i = 0;i < building.getFullInvent().size() - 1;i++){
             Assert.assertFalse(building.getFullInvent().get(i).getNumber() > building.getFullInvent().get(i+1).getNumber());
         }
+    }
+
+    @Test
+    public void TestGettingRooms(){
+        SSMS connection;
+        try {
+            connection = new SSMS();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        Building building = new Building(connection.getConn());
+        Assert.assertNotNull(building.getRooms());
     }
 }

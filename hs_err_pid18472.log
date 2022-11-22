@@ -16,7 +16,7 @@
 
 ---------------  S U M M A R Y ------------
 
-Command Line: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.1\lib\idea_rt.jar=62869:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.1\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 Main
+Command Line: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.1\lib\idea_rt.jar=62869:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.1\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 Main.Main
 
 Host: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz, 8 cores, 15G,  Windows 10 , 64 bit Build 19041 (10.0.19041.207)
 Time: Thu Oct 27 01:04:12 2022  Windows 10 , 64 bit Build 19041 (10.0.19041.207) elapsed time: 0.466820 seconds (0d 0h 0m 0s)
@@ -46,7 +46,7 @@ j  com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(Ljava/util/Propertie
 j  com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(Ljava/lang/String;Ljava/util/Properties;)Ljava/sql/Connection;+45
 j  java.sql.DriverManager.getConnection(Ljava/lang/String;Ljava/util/Properties;Ljava/lang/Class;)Ljava/sql/Connection;+133 java.sql@18.0.2.1
 j  java.sql.DriverManager.getConnection(Ljava/lang/String;)Ljava/sql/Connection;+13 java.sql@18.0.2.1
-j  Main.main([Ljava/lang/String;)V+4
+j  Main.Main.main([Ljava/lang/String;)V+4
 v  ~StubRoutines::call_stub
 
 siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), reading address 0x0000000000000008
@@ -186,7 +186,7 @@ Other Threads:
   0x000002ef6bd3ee90 VMThread "VM Thread" [stack: 0x000000ff2fb00000,0x000000ff2fc00000] [id=14444]
   0x000002ef6bcb39c0 WatcherThread "VM Periodic Task Thread" [stack: 0x000000ff30800000,0x000000ff30900000] [id=15848]
   0x000002ef6bd20500 WorkerThread "GC Thread#0" [stack: 0x000000ff2f600000,0x000000ff2f700000] [id=4976]
-  0x000002ef6bd32fb0 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000ff2f700000,0x000000ff2f800000] [id=1964]
+  0x000002ef6bd32fb0 ConcurrentGCThread "G1 Main.Main Marker" [stack: 0x000000ff2f700000,0x000000ff2f800000] [id=1964]
   0x000002ef6bd338b0 WorkerThread "G1 Conc#0" [stack: 0x000000ff2f800000,0x000000ff2f900000] [id=19680]
   0x000002ef6bd6ae10 ConcurrentGCThread "G1 Refine#0" [stack: 0x000000ff2f900000,0x000000ff2fa00000] [id=8824]
   0x000002ef6bd6d650 ConcurrentGCThread "G1 Service" [stack: 0x000000ff2fa00000,0x000000ff2fb00000] [id=3012]
@@ -636,7 +636,7 @@ symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Us
 
 VM Arguments:
 jvm_args: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.1\lib\idea_rt.jar=62869:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.2.1\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 
-java_command: Main
+java_command: Main.Main
 java_class_path (initial): C:\Users\admin\IdeaProjects\lab4-8\out\production\lab4-8;C:\Users\admin\Desktop\sqljdbc4.jar
 Launcher Type: SUN_STANDARD
 

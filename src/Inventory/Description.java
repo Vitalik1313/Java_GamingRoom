@@ -2,10 +2,10 @@ package Inventory;
 
 public class Description {
     private String size;
-    private String nameToy;
-    private int price;
-    private int id;
-    private int number;
+    private final String nameToy;
+    private final int price;
+    private final int id;
+    private  int number;
 
     public Description(String size, String nameToy, int price,int id,int number) {
         this.size = size;
@@ -33,6 +33,9 @@ public class Description {
         return price;
     }
 
+    public int getId() {
+        return id;
+    }
 
     public int getNumber() {
         return number;
@@ -46,5 +49,9 @@ public class Description {
                 ", price=" + price +
                 ", id=" + id +
                 ", number=" + number + "|||";
+    }
+
+    public void incNumber(){
+        number++;
     }
 }

@@ -10,34 +10,33 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
-import java.util.List;
+
 
 public class Building {
-    private String nameOfBuilding;
+    private final String nameOfBuilding;
     private ArrayList<Gaming_Room> rooms;
-    private final int maxBudget;
-    private final int maxNumberToys;
-    private int curBudget;
-    private int curNumberToys;
+    private Accounting accounting;
     private ArrayList<Inventory> fullInvent;
+    private Connection conn;
 
-    public Building(){
+    public Building(Connection conn){
+        this.conn = conn;
+        accounting = new Accounting();
         nameOfBuilding = "House of fun";
         fullInvent = new ArrayList<Inventory>();
         rooms = new ArrayList <>(3);
-        maxBudget = 20000;
-        maxNumberToys = 60;
-        curBudget = maxBudget;
-        curNumberToys = 0;
         for(int i = 0;i < 3;i++){
             String name = "Room-" + (i+1);
-            rooms.add(new Gaming_Room(name,i+1,maxNumberToys / 3));
+            rooms.add(new Gaming_Room(name,i+1,accounting.getMaxNumberToys() / 3,conn,this));
         }
     }
 
-    public boolean fillRooms(Connection conn) throws SQLException {
+    public Accounting getAccounting() {
+        return accounting;
+    }
+
+    public boolean fillRooms() throws SQLException {
         Statement stat = conn.createStatement();
 
         for(int i = 0; i < rooms.size();i++) {
@@ -45,12 +44,12 @@ public class Building {
             ResultSet rs = stat.executeQuery(query);
 
             while (rs.next()) {
-                if(((curBudget - rs.getInt(3)) < 0) || (curNumberToys == maxNumberToys)){
+                if(((accounting.getCurBudget() - rs.getInt(3)) < 0) || (accounting.getCurNumberToys() == accounting.getMaxNumberToys())){
                     System.out.println("Unable to buy - " + rs.getString(1) + " ID:" + rs.getInt(6));
                 }else {
                     rooms.get(i).buyInventory(new Sport(rs.getString(1), rs.getString(2), rs.getInt(3), rs.getString(4), rs.getString(5), rs.getInt(6), rs.getInt(7)));
-                    curBudget -= rs.getInt(3);
-                    curNumberToys += 1;
+                    accounting.reduceBudget(rs.getInt(3));
+                    accounting.addNewToy();
                 }
             }
 
@@ -58,12 +57,12 @@ public class Building {
             rs = stat.executeQuery(query);
 
             while (rs.next()) {
-                if(((curBudget - rs.getInt(3)) < 0) || (curNumberToys == maxNumberToys)){
+                if(((accounting.getCurBudget() - rs.getInt(3)) < 0) || (accounting.getCurNumberToys() == accounting.getMaxNumberToys())){
                     System.out.println("Unable to buy - " + rs.getString(1) + " ID:" + rs.getInt(6));
                 }else {
                     rooms.get(i).buyInventory(new Device(rs.getString(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getInt(5), rs.getInt(6), rs.getInt(7)));
-                    curBudget -= rs.getInt(4);
-                    curNumberToys += 1;
+                    accounting.reduceBudget(rs.getInt(4));
+                    accounting.addNewToy();
                 }
             }
 
@@ -71,12 +70,12 @@ public class Building {
             rs = stat.executeQuery(query);
 
             while (rs.next()) {
-                if(((curBudget - rs.getInt(3)) < 0) ||  (curNumberToys == maxNumberToys)){
+                if(((accounting.getCurBudget() - rs.getInt(3)) < 0) ||  (accounting.getCurNumberToys() == accounting.getMaxNumberToys())){
                     System.out.println("Unable to buy - " + rs.getString(1) + " ID:" + rs.getInt(6));
                 }else {
                     rooms.get(i).buyInventory(new Toy(rs.getString(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getString(5), rs.getInt(6)));
-                    curBudget -= rs.getInt(3);
-                    curNumberToys += 1;
+                    accounting.reduceBudget(rs.getInt(3));
+                    accounting.addNewToy();
                 }
             }
         }
@@ -100,7 +99,7 @@ public class Building {
             if(room.searchByGroup(group))
                 founded = true;
         }
-        return true;
+        return founded;
     }
 
     public boolean searchBySize(String size){
@@ -146,8 +145,7 @@ public class Building {
     }
 
     public void budgetInfo(){
-        System.out.println("\n\tMaximum budget of \"" + nameOfBuilding + "\" - " + maxBudget + "$");
-        System.out.println("\tCurrent budget - " + curBudget + "$\n");
+        System.out.println(accounting);
     }
 
     void fillFullInvent(){
