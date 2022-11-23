@@ -1,411 +1,84 @@
-Date: Tue Nov 22 21:07:18 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 22 21:07:18 EET 2022
-INFO: Connection to add was set
-
-Date: Tue Nov 22 21:07:18 EET 2022
-INFO: Connection to add was set
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 22 21:07:19 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 22 21:07:19 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 22 21:07:19 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 22 21:07:19 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 22 21:07:19 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 22 21:07:19 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 22 21:07:19 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 22 21:07:19 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 22 21:07:19 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 22 21:07:19 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 22 21:07:19 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 22 21:07:19 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 22 21:07:19 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 22 21:07:19 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 22 21:07:19 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 22 21:07:19 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 22 21:07:19 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 22 21:07:19 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 22 21:07:19 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 22 21:07:19 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 22 21:07:19 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 22 21:07:19 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 22 21:07:19 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 22 21:07:19 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 22 21:07:19 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 22 21:07:19 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 22 21:07:19 EET 2022
+Date: Wed Nov 23 21:16:04 EET 2022
 INFO: Connected to SSMS successfully
 

@@ -2,6 +2,7 @@ package Menus;
 
 import Building.Building;
 import Invokers.MainMenuInv;
+import Logger.MyLogger;
 import Reciever.CallerBuildMenu;
 import Reciever.CallerRoomMenu;
 
@@ -32,6 +33,7 @@ public class MenuInit {
                 building.budgetInfo();
             } else {
                 System.out.println("\n\tSee you soon!");
+                MyLogger.getLogger().info("Program finished");
                 System.exit(0);
             }
         }

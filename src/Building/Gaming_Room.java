@@ -74,17 +74,23 @@ public class Gaming_Room {
 
     public void sortBySize(){
         invent.sort(Comparator.comparing(Inventory::getSize));
+        showInventory();
     }
 
     public void sortByPrice(){
         invent.sort(Comparator.comparing(Inventory::getPrice));
+        showInventory();
     }
 
     public void sortByGroup(){
         invent.sort(Comparator.comparing(Inventory::getGroup));
+        showInventory();
     }
 
-    public void sortByNumber(){invent.sort(Comparator.comparing(Inventory::getNumber));}
+    public void sortByNumber(){
+        invent.sort(Comparator.comparing(Inventory::getNumber));
+        showInventory();
+    }
 
     public ArrayList<Inventory> getInvent() {
         return invent;

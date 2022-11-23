@@ -27,7 +27,6 @@ public class TestAddingInventory {
         Statement stat;
         try {
             stat = connection.getConn().createStatement();
-            MyLogger.getLogger().info("Connection to add was set");
         }
         catch (SQLException e){
             MyLogger.getLogger().severe("Cannot connect");

@@ -10,9 +10,10 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 public class BuildingTest {
-    MyLogger log = new MyLogger();
+
 
     public BuildingTest() throws IOException {
+        MyLogger log = new MyLogger();
     }
 
     @Test

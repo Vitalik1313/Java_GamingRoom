@@ -1,4 +1,4 @@
-package Main;
+package Logger.Main;
 
 import Building.Building;
 import Logger.MyLogger;
@@ -14,7 +14,7 @@ import java.sql.SQLException;
 public class Main {
     public static void main(String[] args) throws SQLException, IOException, MessagingException {
         new MailSender.EmailSender();
-      //  MyLogger logger = new MyLogger();
+        MyLogger logger = new MyLogger();
 
         SSMS connection = new SSMS();
         Building building = new Building(connection.getConn());
