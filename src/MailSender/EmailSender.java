@@ -25,8 +25,8 @@ public class EmailSender {
 
      public void sendMsg(String msgText) throws MessagingException {
          msg = new MimeMessage(mailSession);
-         msg.setFrom(new InternetAddress("kozyrskiyvitaliy10a@gmail.com"));
-         msg.addRecipient(Message.RecipientType.TO, new InternetAddress("kozursky0308@gmail.com"));
+         msg.setFrom(new InternetAddress("*****"));
+         msg.addRecipient(Message.RecipientType.TO, new InternetAddress("******"));
          msg.setSubject("LOG INFO");
          msg.setText(msgText);
          try {
@@ -35,7 +35,7 @@ public class EmailSender {
              throw new RuntimeException(e);
          }
          try {
-             transport.connect(null,"udftvkptlyanjfon");
+             transport.connect(null,"****");
          } catch (MessagingException e) {
              throw new RuntimeException(e);
          }
