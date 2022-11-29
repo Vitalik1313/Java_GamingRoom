@@ -8,7 +8,7 @@ public class Accounting {
 
     public Accounting(){
         maxBudget = 20000;
-        maxNumberToys = 60;
+        maxNumberToys = 70;
         curBudget = maxBudget;
         curNumberToys = 0;
     }

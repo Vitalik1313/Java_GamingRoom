@@ -1,7 +1,7 @@
 package Reciever;
 
 import Building.Building;
-import Interfaces.*;
+import Interfaces.Command;
 import Menus.RoomMenu;
 
 public class CallerRoomMenu implements Command {

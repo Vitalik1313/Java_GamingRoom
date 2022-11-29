@@ -43,12 +43,12 @@ public class Description {
 
     @Override
     public String toString() {
-        return "|||Description: " +
+        return "Description: " +
                 "size='" + size + '\'' +
                 ", nameToy='" + nameToy + '\'' +
                 ", price=" + price +
                 ", id=" + id +
-                ", number=" + number + "|||";
+                ", number=" + number + ", ";
     }
 
     public void incNumber(){

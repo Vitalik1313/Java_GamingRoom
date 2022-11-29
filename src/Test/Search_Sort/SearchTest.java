@@ -27,7 +27,7 @@ public class SearchTest {
         try {
             connection = new SSMS();
         } catch (
-                SQLException e) {
+                SQLException | IOException e) {
             throw new RuntimeException(e);
         }
         building = new Building(connection.getConn());
@@ -36,8 +36,7 @@ public class SearchTest {
         room.buyInventory(new Sport("small","test1",0," "," ",0,1));
         room.buyInventory(new Toy("small","doll",15,43632,"kite",2));
 
-        Assert.assertTrue(room.searchByGroup("Sport"));
-        Assert.assertFalse(room.searchByGroup("Device"));
+        Assert.assertNotEquals("",room.searchByGroup("Sport"));
     }
 
     @Test
@@ -50,15 +49,15 @@ public class SearchTest {
         try {
             connection = new SSMS();
         } catch (
-                SQLException e) {
+                SQLException | IOException e) {
             throw new RuntimeException(e);
         }
         Gaming_Room room = new Gaming_Room("test",0,3,connection.getConn(), building);
         room.buyInventory(new Sport("small","test1",0," "," ",0,1));
         room.buyInventory(new Toy("medium","doll",15,43632,"kite",2));
 
-        Assert.assertTrue(room.searchBySize("SMALL"));
-        Assert.assertFalse(room.searchBySize("big"));
+        Assert.assertNotEquals("",room.searchBySize("SMALL"));
+
     }
 
     @Test
@@ -71,14 +70,13 @@ public class SearchTest {
         try {
             connection = new SSMS();
         } catch (
-                SQLException e) {
+                SQLException | IOException e) {
             throw new RuntimeException(e);
         }
         Gaming_Room room = new Gaming_Room("test",0,3,connection.getConn(), building);
         room.buyInventory(new Sport("small","test1",0," "," ",0,1));
         room.buyInventory(new Toy("small","doll",15,43632,"kite",2));
 
-        Assert.assertTrue(room.searchByName("DOLL"));
-        Assert.assertFalse(room.searchByName("pen"));
+        Assert.assertNotEquals("",room.searchByName("DOLL"));
     }
 }

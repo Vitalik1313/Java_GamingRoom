@@ -3,10 +3,12 @@ package AddingToy;
 import Building.Building;
 import Inventory.*;
 import Logger.MyLogger;
+import MailSender.EmailSender;
 import SSMS_Con.SSMS;
 import org.junit.Assert;
 import org.junit.Test;
 
+import javax.mail.MessagingException;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -14,8 +16,9 @@ import java.sql.Statement;
 
 public class TestAddingInventory {
     @Test
-    public void TestAddExistingToy() throws SQLException, IOException {
+    public void TestAddExistingToy() throws SQLException, IOException, MessagingException {
         MyLogger log = new MyLogger();
+        EmailSender sender = new EmailSender();
         SSMS connection;
         try {
             connection = new SSMS();

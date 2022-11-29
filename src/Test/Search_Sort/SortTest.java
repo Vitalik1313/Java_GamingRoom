@@ -7,6 +7,7 @@ import SSMS_Con.SSMS;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 public class SortTest {
@@ -20,6 +21,8 @@ public class SortTest {
             connection = new SSMS();
         } catch (
                 SQLException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
         building = new Building(connection.getConn());
@@ -39,7 +42,7 @@ public class SortTest {
         try {
             connection = new SSMS();
         } catch (
-                SQLException e) {
+                SQLException | IOException e) {
             throw new RuntimeException(e);
         }
         building = new Building(connection.getConn());
@@ -58,7 +61,7 @@ public class SortTest {
         try {
             connection = new SSMS();
         } catch (
-                SQLException e) {
+                SQLException | IOException e) {
             throw new RuntimeException(e);
         }
         building = new Building(connection.getConn());
@@ -74,11 +77,11 @@ public class SortTest {
     }
 
     @Test
-    public void TestSortByNumber(){
+    public void TestSortByNumber()  {
         try {
             connection = new SSMS();
         } catch (
-                SQLException e) {
+                SQLException | IOException e) {
             throw new RuntimeException(e);
         }
         building = new Building(connection.getConn());

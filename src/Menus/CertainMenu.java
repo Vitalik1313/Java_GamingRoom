@@ -38,12 +38,12 @@ public class CertainMenu {
             } else if (choice == 3) {
                 inv.callSortMenu(building, numberRoom);
             } else if (choice == 4) {
-                try {
-                    building.getRooms().get(numberRoom).addNewToy();
+                /*try {
+                   building.getRooms().get(numberRoom).addNewToy();
                 }
                 catch (SQLException e){
                     MyLogger.getLogger().severe("SQL ERROR");
-                }
+                }*/
             } else if(choice == 5){
                 loop = false;
             }

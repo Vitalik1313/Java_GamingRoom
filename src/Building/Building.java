@@ -20,7 +20,7 @@ public class Building {
     private ArrayList<Inventory> fullInvent;
     private Connection conn;
 
-    public Building(Connection conn){
+    public Building(Connection conn) {
         this.conn = conn;
         accounting = new Accounting();
         nameOfBuilding = "House of fun";
@@ -30,6 +30,13 @@ public class Building {
             String name = "Room-" + (i+1);
             rooms.add(new Gaming_Room(name,i+1,accounting.getMaxNumberToys() / 3,conn,this));
         }
+        try {
+            fillRooms();
+        }
+        catch (SQLException e){
+            System.exit(1);
+        }
+
     }
 
     public Accounting getAccounting() {
@@ -79,65 +86,69 @@ public class Building {
                 }
             }
         }
+
         fillFullInvent();
         return true;
     }
 
-    public void showAllInventory(){
+    public String  showAllInventory(){
+        String output = "";
         for(Inventory invent : fullInvent){
-            System.out.println(invent);
+           // System.out.println(invent);
+            output = output.concat(invent.toString()+"\n");
         }
+        return output;
     }
 
     public void showInventoryInRoom(int numberRoom){
         rooms.get(numberRoom).showInventory();
     }
 
-    public boolean searchByGroup(String group){
-        boolean founded = false;
+    public String  searchByGroup(String group){
+        String output = "";
         for (Gaming_Room room : rooms) {
-            if(room.searchByGroup(group))
-                founded = true;
+            output=output.concat(room.searchByGroup(group));
         }
-        return founded;
+        return output;
     }
 
-    public boolean searchBySize(String size){
-        boolean founded = false;
+    public String searchBySize(String size){
+        String output = "";
         for (Gaming_Room room : rooms) {
-            if(room.searchBySize(size))
-                founded = true;
+            output = output.concat(room.searchBySize(size));
         }
-        return founded;
+        return output;
     }
 
-    public boolean searchByName(String name){
-        boolean founded = false;
+    public String searchByName(String name){
+        String output = "";
         for (Gaming_Room room : rooms) {
-            if(room.searchByName(name))
-                founded = true;
+            output = output.concat(room.searchByName(name));
         }
-        return founded;
+        return output;
     }
 
-    public void sortBySize(){
+    public String sortBySize(){
         fullInvent.sort(Comparator.comparing(Inventory::getSize));
-        showAllInventory();
+       // showAllInventory();
+        return showAllInventory();
     }
 
-    public void sortByPrice(){
+    public String sortByPrice(){
         fullInvent.sort(Comparator.comparing(Inventory::getPrice));
-        showAllInventory();
+       // showAllInventory();
+        return showAllInventory();
     }
 
-    public void sortByGroup(){
+    public String sortByGroup(){
         fullInvent.sort(Comparator.comparing(Inventory::getGroup));
-        showAllInventory();
+        //showAllInventory();
+        return showAllInventory();
     }
 
-    public void sortByNumber(){
+    public String sortByNumber(){
         fullInvent.sort(Comparator.comparing(Inventory::getNumber));
-        showAllInventory();
+        return showAllInventory();
     }
 
     public ArrayList<Gaming_Room> getRooms() {

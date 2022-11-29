@@ -32,93 +32,82 @@ public class Gaming_Room {
         invent.add(inv);
     }
 
-    public void showInventory(){
+    public String showInventory(){
         System.out.println(nameOfRoom + ":");
+        String output = "";
         for (Inventory inventory : invent) {
+            output = output.concat(inventory.toString() + "\n");
             System.out.println(inventory);
         }
+        return output;
     }
 
-    public boolean searchByGroup(String group){
-        boolean founded = false;
+    public String searchByGroup(String group){
+        String output = "";
         for (Inventory inventory : invent) {
             if (inventory.getGroup().equalsIgnoreCase(group)) {
                 System.out.println(inventory);
-                founded = true;
+                output = output.concat(inventory.toString() + "\n");
             }
         }
-        return founded;
+        return output;
     }
 
-    public boolean searchBySize(String size){
-        boolean founded = false;
+    public String searchBySize(String size){
+        String output = "";
         for (Inventory inventory : invent) {
             if (inventory.getDesc().getSize().equalsIgnoreCase(size)) {
                 System.out.println(inventory);
-                founded = true;
+                output = output.concat(inventory.toString() + "\n");
             }
         }
-        return founded;
+        return output;
     }
 
-    public boolean searchByName(String name){
-        boolean founded = false;
+    public String searchByName(String name){
+        String output = "";
         for (Inventory inventory : invent) {
             if (inventory.getDesc().getNameToy().equalsIgnoreCase(name)) {
                 System.out.println(inventory);
-                founded = true;
+                output = output.concat(inventory.toString() + "\n");
             }
         }
-        return founded;
+        return output;
     }
 
-    public void sortBySize(){
+    public String sortBySize(){
         invent.sort(Comparator.comparing(Inventory::getSize));
-        showInventory();
+        return showInventory();
     }
 
-    public void sortByPrice(){
+    public String sortByPrice(){
         invent.sort(Comparator.comparing(Inventory::getPrice));
-        showInventory();
+        return showInventory();
     }
 
-    public void sortByGroup(){
+    public String sortByGroup(){
         invent.sort(Comparator.comparing(Inventory::getGroup));
-        showInventory();
+        return showInventory();
     }
 
-    public void sortByNumber(){
+    public String sortByNumber(){
         invent.sort(Comparator.comparing(Inventory::getNumber));
-        showInventory();
+        return showInventory();
     }
 
     public ArrayList<Inventory> getInvent() {
         return invent;
     }
 
-    public void addNewToy() throws SQLException {
-        System.out.println("\tADD MENU");
-        System.out.println("1 - add Sport to Inventory");
-        System.out.println("2 - add Toy to Inventory");
-        System.out.println("3 - add Device to Inventory");
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Enter choice:");
-        int choice = scan.nextInt();
-
-        Inventory tempObj;
+    public void addNewToy(Inventory obj,String selected) throws SQLException {
+        Inventory tempObj = obj;
         String tableName;
-        if(choice == 1){
+        if(selected.equalsIgnoreCase("Sport")){
             tableName = "dbo.SportRoom";
-            tempObj = new Sport();
-
-        } else if (choice == 2) {
+        } else if (selected.equalsIgnoreCase("Toy")) {
             tableName = "dbo.ToysRoom";
-            tempObj = new Toy();
-
-        } else if (choice == 3) {
+        } else if (selected.equalsIgnoreCase("Device")) {
             tableName = "dbo.DeviceRoom";
-            tempObj = new Device();
-
         }
         else {
             System.out.println("Wrong input");

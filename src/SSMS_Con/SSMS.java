@@ -11,7 +11,7 @@ import java.sql.*;
 
 public class SSMS {
     private Connection conn;
-    public SSMS() throws SQLException {
+    public SSMS() throws SQLException, IOException {
         conn = null;
         try {
             String user = "DESKTOP-1F90U0Q\\admin";
@@ -20,15 +20,17 @@ public class SSMS {
             MyLogger.getLogger().info("Connected to SSMS successfully");
         } catch (SQLException ex) {
             MyLogger.getLogger().severe("SQL Server don't response\n");
+            EmailSender sender = null;
             try {
-                EmailSender sender = new EmailSender();
-                sender.sendMsg("SQL SERVER CAN'T RESPONSE");
-            } catch (IOException e) {
-                MyLogger.getLogger().severe("IOException error");
+                sender = new EmailSender();
             } catch (MessagingException e) {
                 throw new RuntimeException(e);
             }
-            ex.printStackTrace();
+            try {
+                sender.sendMsg("SQL SERVER CAN'T RESPONSE");
+            } catch (MessagingException e) {
+                throw new RuntimeException(e);
+            }
             System.exit(0);
         }
     }

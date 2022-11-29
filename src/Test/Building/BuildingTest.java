@@ -21,7 +21,7 @@ public class BuildingTest {
         SSMS connection;
         try {
             connection = new SSMS();
-        } catch (SQLException e) {
+        } catch (SQLException | IOException e) {
             throw new RuntimeException(e);
         }
         Building building = new Building(connection.getConn());
@@ -33,15 +33,15 @@ public class BuildingTest {
         SSMS connection;
         try {
             connection = new SSMS();
-        } catch (SQLException e) {
+        } catch (SQLException | IOException e) {
             throw new RuntimeException(e);
         }
         Building building = new Building(connection.getConn());
         building.fillRoomsTest();
 
-        Assert.assertTrue(building.searchByName("ball machine"));
-        Assert.assertTrue(building.searchByGroup("Sport"));
-        Assert.assertTrue(building.searchBySize("MEDIUM"));
+        Assert.assertNotEquals("",building.searchByName("ball machine"));
+        Assert.assertNotEquals("",building.searchByGroup("Sport"));
+        Assert.assertNotEquals("",building.searchBySize("MEDIUM"));
     }
 
     @Test
@@ -49,7 +49,7 @@ public class BuildingTest {
         SSMS connection;
         try {
             connection = new SSMS();
-        } catch (SQLException e) {
+        } catch (SQLException | IOException e) {
             throw new RuntimeException(e);
         }
         Building building = new Building(connection.getConn());
@@ -67,7 +67,7 @@ public class BuildingTest {
         SSMS connection;
         try {
             connection = new SSMS();
-        } catch (SQLException e) {
+        } catch (SQLException | IOException e) {
             throw new RuntimeException(e);
         }
         Building building = new Building(connection.getConn());
@@ -85,7 +85,7 @@ public class BuildingTest {
         SSMS connection;
         try {
             connection = new SSMS();
-        } catch (SQLException e) {
+        } catch (SQLException | IOException e) {
             throw new RuntimeException(e);
         }
         Building building = new Building(connection.getConn());
@@ -103,7 +103,7 @@ public class BuildingTest {
         SSMS connection;
         try {
             connection = new SSMS();
-        } catch (SQLException e) {
+        } catch (SQLException | IOException e) {
             throw new RuntimeException(e);
         }
         Building building = new Building(connection.getConn());
@@ -120,7 +120,7 @@ public class BuildingTest {
         SSMS connection;
         try {
             connection = new SSMS();
-        } catch (SQLException e) {
+        } catch (SQLException | IOException e) {
             throw new RuntimeException(e);
         }
         Building building = new Building(connection.getConn());

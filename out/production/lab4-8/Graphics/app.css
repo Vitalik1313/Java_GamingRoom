@@ -1,0 +1,16 @@
+.root{
+    -fx-background-color: "Bisque";
+
+}
+
+.button {
+    -fx-background-color: "DarkSalmon";
+    -fx-text-fill: "White";
+    -fx-font-family: "Berlin Sans FB"
+}
+
+#mainMenuLabel{
+    -fx-text-fill: "DarkSalmon";
+}
+
+

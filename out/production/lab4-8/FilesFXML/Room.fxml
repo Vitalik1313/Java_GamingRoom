@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Graphics.Controller">
+   <children>
+      <Label fx:id="mainMenuLabel" alignment="CENTER" layoutX="151.0" layoutY="28.0" prefHeight="99.0" prefWidth="298.0" text="SELECT ROOM">
+         <font>
+            <Font name="Broadway" size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="223.0" layoutY="147.0" mnemonicParsing="false" onAction="#getInFirstRoom" prefHeight="30.0" prefWidth="148.0" text="Room-1 (5-9 y.o.)">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="223.0" layoutY="185.0" mnemonicParsing="false" onAction="#getInSecondRoom" prefHeight="30.0" prefWidth="148.0" text="Room-2 (10-14 y.o)">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="223.0" layoutY="223.0" mnemonicParsing="false" onAction="#getInThirdRoom" prefHeight="30.0" prefWidth="148.0" text="Room-3 (15-16 y.o.)">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="backButt" layoutX="223.0" layoutY="262.0" mnemonicParsing="false" onAction="#backtoMain" prefHeight="30.0" prefWidth="148.0" text="Back">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="80.0" fitWidth="464.0" layoutX="103.0" layoutY="306.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../Images/2222.png" />
+      </ImageView>
+   </children>
+</AnchorPane>

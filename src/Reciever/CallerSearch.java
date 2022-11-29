@@ -1,7 +1,6 @@
 package Reciever;
 
 import Building.Building;
-import Interfaces.Command;
 import Interfaces.Command2;
 import Menus.SearchMenu;
 

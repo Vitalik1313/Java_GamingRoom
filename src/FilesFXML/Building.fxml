@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Graphics.ControlBuilding">
+   <children>
+      <Button layoutX="69.0" layoutY="342.0" mnemonicParsing="false" onAction="#backtoStart" prefHeight="26.0" prefWidth="126.0" text="Back">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Label fx:id="mainMenuLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="172.0" layoutY="25.0" prefHeight="75.0" prefWidth="274.0" text="BUILDING" textFill="WHITE">
+         <font>
+            <Font name="Broadway" size="48.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="365.0" layoutY="100.0" prefHeight="26.0" prefWidth="144.0" text="Result">
+         <font>
+            <Font name="Berlin Sans FB" size="18.0" />
+         </font>
+      </Label>
+      <ScrollPane fx:id="scrollPane" layoutX="287.0" layoutY="133.0" prefHeight="254.0" prefWidth="299.0">
+        <content>
+          <AnchorPane fx:id="scroll" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+        </content>
+      </ScrollPane>
+      <RadioButton fx:id="rSize" layoutX="14.0" layoutY="167.0" mnemonicParsing="false" onAction="#listSortedAll" prefHeight="18.0" prefWidth="52.0" text="size">
+         <toggleGroup>
+            <ToggleGroup fx:id="sort" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rGroup" layoutX="81.0" layoutY="167.0" mnemonicParsing="false" onAction="#listSortedAll" prefHeight="18.0" prefWidth="59.0" text="group" toggleGroup="$sort" />
+      <RadioButton fx:id="rNumber" layoutX="151.0" layoutY="167.0" mnemonicParsing="false" onAction="#listSortedAll" prefHeight="18.0" prefWidth="69.0" text="number" toggleGroup="$sort" />
+      <Label fx:id="sortLabel" layoutX="10.0" layoutY="133.0" prefHeight="22.0" prefWidth="59.0" text="Sort by:">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="rPrice" layoutX="227.0" layoutY="167.0" mnemonicParsing="false" onAction="#listSortedAll" prefHeight="18.0" prefWidth="59.0" text="price" toggleGroup="$sort" />
+      <Label fx:id="sortLabel1" layoutX="10.0" layoutY="200.0" prefHeight="22.0" prefWidth="79.0" text="Search by:">
+         <font>
+            <Font name="Comic Sans MS" size="14.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="rSizeSearch" layoutX="14.0" layoutY="231.0" mnemonicParsing="false" onAction="#searchRadio" prefHeight="18.0" prefWidth="52.0" text="size">
+         <toggleGroup>
+            <ToggleGroup fx:id="search" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rGroupSearch" layoutX="81.0" layoutY="231.0" mnemonicParsing="false" onAction="#searchRadio" prefHeight="18.0" prefWidth="59.0" text="group" toggleGroup="$search" />
+      <RadioButton fx:id="rNameSearch" layoutX="156.0" layoutY="231.0" mnemonicParsing="false" onAction="#searchRadio" prefHeight="18.0" prefWidth="59.0" text="name" toggleGroup="$search" />
+      <TextField fx:id="textfFeld" layoutX="14.0" layoutY="260.0" visible="false" />
+      <Button fx:id="submitBut" layoutX="168.0" layoutY="260.0" mnemonicParsing="false" onAction="#submit" onDragDetected="#submit" text="Submit" visible="false" />
+   </children>
+</AnchorPane>
