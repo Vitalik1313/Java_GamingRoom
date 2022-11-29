@@ -1,24 +1,12 @@
-Date: Tue Nov 29 16:49:48 EET 2022
+Date: Wed Nov 30 01:31:00 EET 2022
 INFO: Mail Session set
 
-Date: Tue Nov 29 16:49:49 EET 2022
+Date: Wed Nov 30 01:31:00 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 29 16:49:49 EET 2022
+Date: Wed Nov 30 01:31:01 EET 2022
 INFO: Connected to SSMS successfully
 
-Date: Tue Nov 29 16:49:51 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 29 16:50:06 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 29 16:50:12 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 29 16:50:16 EET 2022
-INFO: Connected to SSMS successfully
-
-Date: Tue Nov 29 16:50:23 EET 2022
+Date: Wed Nov 30 01:31:02 EET 2022
 INFO: Connected to SSMS successfully
 
