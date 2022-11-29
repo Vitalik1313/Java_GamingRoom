@@ -1,6 +1,7 @@
 package Graphics;
 
 import Building.Building;
+import Inventory.Inventory;
 import SSMS_Con.SSMS;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -70,7 +71,7 @@ public class RoomController {
 
     @FXML
     public void backtoMain(ActionEvent actionEvent) throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../FilesFXML/Room.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Room.fxml"));
         Parent root = loader.load();
         Stage stageBuild = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         Scene sceneBuild = new Scene(root);
@@ -149,16 +150,16 @@ public class RoomController {
         FXMLLoader loader;
         switch (selected){
             case "Sport":
-                loader = new FXMLLoader(getClass().getResource("../FilesFXML/Sport.fxml"));
+                loader = new FXMLLoader(getClass().getResource("Sport.fxml"));
                 break;
             case "Device":
-                loader = new FXMLLoader(getClass().getResource("../FilesFXML/Device.fxml"));
+                loader = new FXMLLoader(getClass().getResource("Device.fxml"));
                 break;
             case "Toy":
-                loader = new FXMLLoader(getClass().getResource("../FilesFXML/Toy.fxml"));
+                loader = new FXMLLoader(getClass().getResource("Toy.fxml"));
                 break;
             default:
-                loader = new FXMLLoader(getClass().getResource("../FilesFXML/Sport.fxml"));
+                loader = new FXMLLoader(getClass().getResource("Sport.fxml"));
         }
 
         Parent root = loader.load();

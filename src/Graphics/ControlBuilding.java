@@ -1,6 +1,7 @@
 package Graphics;
 
 import Building.Building;
+import SSMS_Con.SSMS;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,10 +13,13 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.layout.Background;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class ControlBuilding {
 
@@ -45,7 +49,7 @@ public class ControlBuilding {
 
     @FXML
     public void backtoMain(ActionEvent actionEvent) throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../FilesFXML/Room.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Room.fxml"));
         Parent root = loader.load();
         Stage stageBuild = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         Scene sceneBuild = new Scene(root);
@@ -106,7 +110,7 @@ public class ControlBuilding {
 
     @FXML
     public void backtoStart(ActionEvent actionEvent) throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../FilesFXML/sample.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("sample.fxml"));
         Parent root = loader.load();
         Stage stageBuild = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         Scene sceneBuild = new Scene(root);

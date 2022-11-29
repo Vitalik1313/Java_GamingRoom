@@ -10,10 +10,15 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
+import java.awt.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -35,7 +40,7 @@ public class Controller {
 
     @FXML
     public void switchToBuilding(ActionEvent actionEvent) throws IOException, SQLException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../FilesFXML/Building.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Building.fxml"));
         root = loader.load();
         stageBuild = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         sceneBuild = new Scene(root);
@@ -55,7 +60,7 @@ public class Controller {
 
     @FXML
     public void switchToRoom(ActionEvent actionEvent) throws IOException{
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../FilesFXML/Room.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Room.fxml"));
         root = loader.load();
         stageBuild = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         sceneBuild = new Scene(root);
@@ -91,7 +96,7 @@ public class Controller {
 
     @FXML
     public void getInFirstRoom(ActionEvent actionEvent) throws SQLException, IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../FilesFXML/CertainRoom.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("CertainRoom.fxml"));
         root = loader.load();
         stageBuild = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         sceneBuild = new Scene(root);
@@ -110,7 +115,7 @@ public class Controller {
 
     @FXML
     public void getInSecondRoom(ActionEvent actionEvent) throws SQLException, IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../FilesFXML/CertainRoom.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("CertainRoom.fxml"));
         root = loader.load();
         stageBuild = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         sceneBuild = new Scene(root);
@@ -129,7 +134,7 @@ public class Controller {
 
     @FXML
     public void getInThirdRoom(ActionEvent actionEvent) throws SQLException, IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../FilesFXML/CertainRoom.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("CertainRoom.fxml"));
         root = loader.load();
         stageBuild = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         sceneBuild = new Scene(root);
@@ -149,7 +154,7 @@ public class Controller {
     @FXML
     public void backtoMain(ActionEvent actionEvent) throws IOException, SQLException {
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../FilesFXML/sample.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("sample.fxml"));
         Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         Parent root = loader.load();
 

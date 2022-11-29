@@ -37,7 +37,7 @@ public class ControlAdding {
 
     @FXML
     public void backToRoom(ActionEvent actionEvent) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("../FilesFXML/CertainRoom.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("CertainRoom.fxml"));
         Parent root = loader.load();
         Stage stageBuild = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         Scene sceneBuild = new Scene(root);
