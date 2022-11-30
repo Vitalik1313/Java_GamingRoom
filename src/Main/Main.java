@@ -31,9 +31,12 @@ public class Main  {
             sender.sendMsg("ERROR: CAN'T FILL ROOMS");
         }*/
 
+
+        building.showUsedInvent();
         GraphicsMain graphicsMain = new GraphicsMain();
         graphicsMain.setBuilding_Conn(building,connection);
         graphicsMain.startWindow();
+
 
        // new MenuInit(building);
     }

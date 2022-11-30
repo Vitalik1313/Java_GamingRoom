@@ -180,5 +180,14 @@ public class Building {
     public ArrayList<Inventory> getFullInvent() {
         return fullInvent;
     }
+
+    public void showUsedInvent(){
+        for(int i = 0;i < fullInvent.size();i++){
+            if(fullInvent.get(i) instanceof Sport
+                    && ((Sport) fullInvent.get(i)).getQuality().equalsIgnoreCase("used")){
+                System.out.println(fullInvent.get(i));
+            }
+        }
+    }
 }
 
